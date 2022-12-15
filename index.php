@@ -1,6 +1,6 @@
 <?php
     $my_array = [
-        'domanda' => "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
+        'domanda' => "<h1>Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?</h1>",
         'risposta' => 
         "<p>
         La recente
@@ -58,8 +58,8 @@
         ",
 
 
-        'domanda_due' => 'Come fa Google a proteggere la mia privacy e a tenere le mie informazioni al sicuro?',
-        'risposta_due' =>
+        'domanda' => '<h1>Come fa Google a proteggere la mia privacy e a tenere le mie informazioni al sicuro?</h1>',
+        'risposta' =>
         "<p>
             Sappiamo che la sicurezza e la privacy sono importanti per te e lo sono anche
             per noi. Per noi è imperativo offrire un'elevata sicurezza e assicurarti che
@@ -88,8 +88,8 @@
             te il controllo.
         </p>
         ",
-        'domanda_tre' => 'Perche il mio account è associato a un paese',
-        'risposta_tre' => 
+        'domanda' => '<h1?>Perche il mio account è associato a un paese</h1>',
+        'risposta' => 
         "
         <p>
             Il tuo account è associato a un paese (o territorio) nei Termini di servizio
@@ -143,8 +143,8 @@
             il paese associato al tuo account sia sbagliato.
         </p>
         ",
-        'domanda_quattro' => "Come faccio a rimuovere informazioni su di me dai risultati di ricerca Google",
-        'risposta_quattro' => 
+        'domanda' => "<h1>Come faccio a rimuovere informazioni su di me dai risultati di ricerca Google</h1>",
+        'risposta' => 
         "
         <p>
             I risultati di ricerca di Google rispecchiano i contenuti pubblicamente
@@ -171,8 +171,8 @@
             >.
         </p>
         ",
-        'domanda_cinque' => "Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?",
-        'risposta_cinque' => 
+        'domanda' => "<h1>Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?</h1>",
+        'risposta' => 
         "
         <p>
             In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il
@@ -195,13 +195,6 @@
         ",
     ];
 ?>
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -211,31 +204,11 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- prima faq -->
-    <div class="prima-domanda">
-        <h2><?php echo $my_array['domanda']?></h2>
-        <p><?php echo $my_array['risposta']?></p>
-    </div>
-    <!-- seconda faq -->
-    <div class="seconda-domanda">
-        <h2><?php echo $my_array['domanda_due']?></h2>
-        <p><?php echo $my_array['risposta_due']?></p>
-    </div>
-    <!-- terza faq -->
-    <div class="terza-domanda">
-        <h2><?php echo $my_array['domanda_tre']?></h2>
-        <p><?php echo $my_array['risposta_tre']?></p>
-    </div>
-    <!-- quarta faq -->
-    <div class="terza-domanda">
-        <h2><?php echo $my_array['domanda_quattro']?></h2>
-        <p><?php echo $my_array['risposta_quattro']?></p>
-    </div>
-    <!-- ultima faq -->
-    <div class="terza-domanda">
-        <h2><?php echo $my_array['domanda_cinque']?></h2>
-        <p><?php echo $my_array['risposta_cinque']?></p>
-    </div>
+    <?php
+    for ($i = 0; $i < count($my_array); $i++){
+        echo $my_array['domanda'] . $my_array['risposta'];
+    };
+    ?>
 </body>
 </html>
 
