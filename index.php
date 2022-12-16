@@ -220,16 +220,16 @@
 <body>
     <header>
         <div class="logo">
-            <img class="logo" src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
+            <img class="logo" src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg">
             <p class="privacy">Privacy e Termini</p>
         </div>
         <div>
             <ul class="lista">
-                <li class="ut53P"><a class="MyGDhe" href="#">Introduzione</a></li>
-                <li class="ut53P"><a class="MyGDhe" href="#">Norme sulla privacy</a></li>
-                <li class="ut53P"><a class="MyGDhe" href="#">Termini di servizio</a></li>
-                <li class="ut53P"><a class="MyGDhe" href="#">Tecnologie</a></li>
-                <li class="ut53P alvOm"><a class="MyGDhe YnafU"  href="#">Domande frequenti</a></li>
+                <li href="#!">Introduzione</li>
+                <li href="#">Norme sulla privacy</li>
+                <li href="#">Termini di servizio</li>
+                <li href="#">Tecnologie</li>
+                <li href="#">Domande frequenti</li>
             </ul>
             <hr>
         </div>
@@ -238,11 +238,10 @@
     </div>
     <div class="testo">
         <?php
-        foreach ($my_array as $key => $value) {
-            foreach ($my_array[$key] as $key => $value) {
-                echo $value;
-            }
-        }
+        foreach ($my_array as $qa) {
+            echo "{$qa['domanda']}";
+            echo "{$qa['risposta']}";
+        };
         ?>
     </div>
 </body>
